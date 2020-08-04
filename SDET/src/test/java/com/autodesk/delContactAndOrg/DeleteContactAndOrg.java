@@ -136,7 +136,7 @@ public class DeleteContactAndOrg {
 
 		driver.findElement(By.name("search_text")).sendKeys(orgname);
 		driver.findElement(By.xpath("//input[@value=' Search Now ']")).click();
-
+		//wait till status bar invisible
 		wait.until(ExpectedConditions.invisibilityOf(status));
 
 		driver.findElement(By.xpath("//a[.='"+orgname+"']/ancestor::td//input[@name='selected_id']")).click();
